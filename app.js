@@ -9,7 +9,6 @@ app.set('view engine','ejs');
 app.use('/recursos',express.static(__dirname+'/public'));
 
 //CONEXION A BDD
-var mysql = require('mysql');
 
 var conexion = mysql.createConnection({
     host:'btx78x8b1go9kvgzaj9b-mysql.services.clever-cloud.com',

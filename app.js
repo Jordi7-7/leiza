@@ -6,7 +6,7 @@ const app = express();
 
 app.set('view engine','ejs');
 
-app.use('/recursos',express.static(__dirname+'/public'));
+app.use('/recursos',express.static(process.cwd()+'/public'));
 
 //CONEXION A BDD
 

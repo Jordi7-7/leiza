@@ -1,6 +1,7 @@
 import {PORT} from './config.js';
+import express from 'express';
+import mysql from 'mysql';
 
-const express = require('express');
 const app = express();
 
 app.set('view engine','ejs');

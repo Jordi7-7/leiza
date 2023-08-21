@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="recursos/js/productosH.js"></script>
+  <link rel="stylesheet" href="recursos/css/styleindex.css">
+  <link rel="stylesheet" href="recursos/css/styleproductos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Nunito+Sans:opsz,wght@6..12,300&display=swap" rel="stylesheet">
+  <title>Leiza-Shop</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="header-info">
+
+        <div class="header-info-logo">
+          <a href="/">
+            <img src="recursos/img/Leiza-Logo.svg" alt="Leiza-Logo" />
+          </a>
+        </div>
+        <ul class="header-info-login">
+          <li><img class="icon-user" src="recursos/img/icon-user.svg" alt="icon-user"> <span>Iniciar Sesión</span></li>
+        </ul>
+
+      </div>
+      <div class="header-categories">
+
+        <ul class="header-categories-list">
+          <li class="btn-Sudaderas"><img src="recursos/img/Catalogo/Hombre/Sudadera-Gris.png" alt="Sudadera Gris"><span>Sudaderas</span></li>
+          <li class="btn-Playeras"><img src="recursos/img/Catalogo/Hombre/Camiseta-Negra.png" alt="Camiseta-Negra"><span>Playeras</span></li>
+          <li class="btn-Tennis"><img src="recursos/img/Catalogo/Hombre/Tennis-blanco.png" alt="Tennis"><span>Tennis</span></li>
+          <li class="btn-Chamarras"><img src="recursos/img/Catalogo/Hombre/chamarra.png" alt="Chamarra"><span>Chamarras/Chalecos</span></li>
+          <li class="btn-Camisas"><img src="recursos/img/Catalogo/Hombre/camisa.png" alt="Camisa"><span>Camisas/Polos</span></li>
+          <li class="btn-Pantalones"><img src="recursos/img/Catalogo/Hombre/pantalon.png" alt="Pantalon"><span>Pantalones</span></li>
+
+        </ul>
+
+
+      </div>
+    </nav>
+  </header>
+
+  <section class="seccion sec-Sudaderas">
+    <div class="contenido">
+      <h1>Sudaderas</h1>
+      <div class="items">
+        <% if(typeof data != 'undefined') { %>
+        <% data.forEach( (prenda) => { %>
+        <% if(prenda.ID_CAT==3){ %>
+        <div class="item">
+          <img src="recursos/img/Catalogo/Hombre/Sudaderas/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <div class="producto-info">
+            <span><%= prenda.NOMBRE %></span>
+            <span class="precio">MXN <%= prenda.PRECIO %></span>
+          </div>
+        </div>
+        <% } %>
+        <% }) %>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion sec-Playeras">
+    <div class="contenido">
+      <h1>Playeras</h1>
+      <div class="items">
+        <% if(typeof data != 'undefined') { %>
+        <% data.forEach( (prenda) => { %>
+        <% if(prenda.ID_CAT==2){ %>
+        <div class="item">
+          <img src="recursos/img/Catalogo/Hombre/Playeras/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <div class="producto-info">
+            <span><%= prenda.NOMBRE %></span>
+            <span class="precio">MXN <%= prenda.PRECIO %></span>
+          </div>
+        </div>
+        <% } %>
+        <% }) %>
+        <% } %>
+      </div>
+  </section>
+
+  <section class="seccion sec-Tennis">
+    <div class="contenido">
+      <h1>Tennis</h1>
+      <div class="items">
+        <% if(typeof data != 'undefined') { %>
+        <% data.forEach( (prenda) => { %>
+        <% if(prenda.ID_CAT==7){ %>
+        <div class="item">
+          <img src="recursos/img/Catalogo/Hombre/Sudaderas/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <div class="producto-info">
+            <span><%= prenda.NOMBRE %></span>
+            <span class="precio">MXN <%= prenda.PRECIO %></span>
+          </div>
+        </div>
+        <% } %>
+        <% }) %>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion sec-Chamarras">
+    <div class="contenido">
+      <h1>Chamarras</h1>
+      <div class="items">
+        <% if(typeof data != 'undefined') { %>
+        <% data.forEach( (prenda) => { %>
+        <% if(prenda.ID_CAT==1){ %>
+        <div class="item">
+          <img src="recursos/img/Catalogo/Hombre/Chamarras/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <div class="producto-info">
+            <span><%= prenda.NOMBRE %></span>
+            <span class="precio">MXN <%= prenda.PRECIO %></span>
+          </div>
+        </div>
+        <% } %>
+        <% }) %>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion sec-Camisas">
+    <div class="contenido">
+      <h1>Camisas</h1>
+      <div class="items">
+        <% if(typeof data != 'undefined') { %>
+        <% data.forEach( (prenda) => { %>
+        <% if(prenda.ID_CAT==5){ %>
+        <div class="item">
+          <img src="recursos/img/Catalogo/Hombre/Camisas/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <div class="producto-info">
+            <span><%= prenda.NOMBRE %></span>
+            <span class="precio">MXN <%= prenda.PRECIO %></span>
+          </div>
+        </div>
+        <% } %>
+        <% }) %>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion sec-Pantalones">
+    <div class="contenido">
+      <h1>Pantalones</h1>
+      <div class="items">
+        <% if(typeof data != 'undefined') { %>
+        <% data.forEach( (prenda) => { %>
+        <% if(prenda.ID_CAT==6){ %>
+        <div class="item">
+          <img src="recursos/img/Catalogo/Hombre/Pantalones/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <div class="producto-info">
+            <span><%= prenda.NOMBRE %></span>
+            <span class="precio">MXN <%= prenda.PRECIO %></span>
+          </div>
+        </div>
+        <% } %>
+        <% }) %>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+
+</html>

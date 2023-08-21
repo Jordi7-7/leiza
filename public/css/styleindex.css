@@ -1,0 +1,105 @@
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+}
+
+li{    
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.sec-Home{
+    display: flex;
+    overflow: hidden;
+    
+}
+
+.header-info{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 10px;
+}
+.header-info-logo img{
+     height: 96px;
+     width: 100px;
+}
+
+.header-info-logo a{
+    height: 96px;
+    width: 100px;
+}
+
+.header-info-logo{
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-info-login{
+    grid-column: 3;
+}
+.header-info-login li{
+    display: flex;
+  justify-content: space-between; /* Alineación horizontal */
+  align-items: center;
+  width: 130px;
+}
+
+.icon-user{
+    height: 24px;
+    width: 24px;
+}
+
+
+
+
+
+
+
+.fondo{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;     
+    width: 50%;
+    height: 840px;
+    margin: auto;
+    transition: all .6s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hombre{
+    background-image: url('../img/Fondo-hombre.jpg');
+}
+
+.mujer{
+    background-image: url('../img/fondo-mujer.jpeg');
+}
+
+
+
+.fondo:hover {
+    transform: scale(1.1); /* Aumenta en un 10% (1 + 0.1) */    
+
+}
+
+.fondo h1{
+    color: white;
+    border:solid  white;
+    padding: 15px;
+    font-size: 100px;
+    font-weight: bold;
+    margin:0;
+    
+}
+

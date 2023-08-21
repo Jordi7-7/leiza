@@ -1,0 +1,89 @@
+
+
+.header-categories-list{
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin:auto;
+    padding-bottom: 10px;
+
+}
+
+.header-categories-list li{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+
+.header-categories-list li:hover{
+    transform: scale(1.1); /* Aumenta en un 10% (1 + 0.1) */    
+}
+
+.header-categories-list img{
+    height: 100px ;
+    width: auto;
+}
+
+
+.seccion{
+    height: 100vh;
+    
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+  .seccion div h1{
+    color: black;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .oculta {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+
+ 
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item{
+    width: 25%;
+    background-color: #f1f1f1;
+    padding: 0 7px;
+    box-sizing: border-box;
+}
+  
+.item img{
+    max-width: 100%;
+    height: auto;
+}
+
+.contenido{
+    box-sizing: border-box;
+    padding: 0 44px;
+}
+
+.producto-info{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+font-size: 13px;
+}
+
+.precio{
+    font-weight: bolder;
+    margin-top: 5px;
+}
+

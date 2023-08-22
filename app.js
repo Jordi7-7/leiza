@@ -1,10 +1,13 @@
 import {PORT} from './config.js';
 import express from 'express';
 import mysql from 'mysql';
+import bodyParser from 'body-parser';
 
 const app = express();
 
 app.set('view engine','ejs');
+
+
 
 app.use('/recursos',express.static(process.cwd()+'/public'));
 
@@ -65,4 +68,19 @@ app.get('/mujer',(req,res)=>{
 });
 
 
+
+app.get('/buscar/:id_prod',(req,res)=>{
+
+    const id = req.params.id_prod;
+
+    conexion.query('SELECT * FROM PRODUCTOS WHERE ID_PROD = ?',[id],(error,results)=>{
+
+        if(error) throw error;  
+
+        console.log(results);
+        res.json(results);
+        
+
+    });
+});
 

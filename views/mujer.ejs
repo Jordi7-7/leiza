@@ -57,7 +57,7 @@
         <% data.forEach( (prenda) => { %>
         <% if(prenda.ID_CAT==9){ %>
         <div class="item">
-          <img src="recursos/img/Catalogo/Mujer/Blusas/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <img src="<%= prenda.IMAGEN %>" alt="<%= prenda.NOMBRE %>">
           <div class="producto-info">
             <span><%= prenda.NOMBRE %></span>
             <span class="precio">MXN <%= prenda.PRECIO %></span>
@@ -78,7 +78,7 @@
         <% data.forEach( (prenda) => { %>
         <% if(prenda.ID_CAT==8){ %>
         <div class="item">
-          <img src="recursos/img/Catalogo/Mujer/Vestidos/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <img src="<%=prenda.IMAGEN%>" alt="<%= prenda.NOMBRE %>">
           <div class="producto-info">
             <span><%= prenda.NOMBRE %></span>
             <span class="precio">MXN <%= prenda.PRECIO %></span>
@@ -98,7 +98,7 @@
         <% data.forEach( (prenda) => { %>
         <% if(prenda.ID_CAT==1){ %>
         <div class="item">
-          <img src="recursos/img/Catalogo/Mujer/Chamarras/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <img src="<%=prenda.IMAGEN%>" alt="<%= prenda.NOMBRE %>">
           <div class="producto-info">
             <span><%= prenda.NOMBRE %></span>
             <span class="precio">MXN <%= prenda.PRECIO %></span>
@@ -118,7 +118,7 @@
         <% data.forEach( (prenda) => { %>
         <% if(prenda.ID_CAT==3){ %>
         <div class="item">
-          <img src="recursos/img/Catalogo/Mujer/Sudaderas/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <img src="<%=prenda.IMAGEN%>" alt="<%= prenda.NOMBRE %>">
           <div class="producto-info">
             <span><%= prenda.NOMBRE %></span>
             <span class="precio">MXN <%= prenda.PRECIO %></span>
@@ -138,7 +138,7 @@
         <% data.forEach( (prenda) => { %>
         <% if(prenda.ID_CAT==2){ %>
         <div class="item">
-          <img src="recursos/img/Catalogo/Mujer/Playeras/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <img src="<%=prenda.IMAGEN%>" alt="<%= prenda.NOMBRE %>">
           <div class="producto-info">
             <span><%= prenda.NOMBRE %></span>
             <span class="precio">MXN <%= prenda.PRECIO %></span>
@@ -158,7 +158,7 @@
         <% data.forEach( (prenda) => { %>
         <% if(prenda.ID_CAT==7){ %>
         <div class="item">
-          <img src="recursos/img/Catalogo/Mujer/Calzados/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <img src="<%=prenda.IMAGEN%>" alt="<%= prenda.NOMBRE %>">
           <div class="producto-info">
             <span><%= prenda.NOMBRE %></span>
             <span class="precio">MXN <%= prenda.PRECIO %></span>
@@ -184,7 +184,7 @@
         <% data.forEach( (prenda) => { %>
         <% if(prenda.ID_CAT==5){ %>
         <div class="item">
-          <img src="recursos/img/Catalogo/Mujer/Camisas/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <img src="<%=prenda.IMAGEN%>" alt="<%= prenda.NOMBRE %>">
           <div class="producto-info">
             <span><%= prenda.NOMBRE %></span>
             <span class="precio">MXN <%= prenda.PRECIO %></span>
@@ -204,7 +204,7 @@
         <% data.forEach( (prenda) => { %>
         <% if(prenda.ID_CAT==6){ %>
         <div class="item">
-          <img src="recursos/img/Catalogo/Mujer/Pantalones/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <img src="<%=prenda.IMAGEN%>" alt="<%= prenda.NOMBRE %>">
           <div class="producto-info">
             <span><%= prenda.NOMBRE %></span>
             <span class="precio">MXN <%= prenda.PRECIO %></span>
@@ -224,7 +224,7 @@
         <% data.forEach( (prenda) => { %>
         <% if(prenda.ID_CAT==15){ %>
         <div class="item">
-          <img src="recursos/img/Catalogo/Mujer/Bolsos/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <img src="<%=prenda.IMAGEN%>" alt="<%= prenda.NOMBRE %>">
           <div class="producto-info">
             <span><%= prenda.NOMBRE %></span>
             <span class="precio">MXN <%= prenda.PRECIO %></span>
@@ -244,7 +244,7 @@
         <% data.forEach( (prenda) => { %>
         <% if(prenda.ID_CAT==11 || prenda.ID_CAT==13){ %>
         <div class="item">
-          <img src="recursos/img/Catalogo/Mujer/Faldas/<%= prenda.ID_PROD %>.jpg" alt="<%= prenda.NOMBRE %>">
+          <img src="<%=prenda.IMAGEN%>" alt="<%= prenda.NOMBRE %>">
           <div class="producto-info">
             <span><%= prenda.NOMBRE %></span>
             <span class="precio">MXN <%= prenda.PRECIO %></span>

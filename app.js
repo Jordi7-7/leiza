@@ -122,7 +122,7 @@ app.post('/insertar',(req,res)=>{
     }
   });
     
-  const sql = "INSERT INTO productos VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+  const sql = "INSERT INTO PRODUCTOS VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 const values = [id, genero, categoria, nombre, descripcion, cantidad, precio, imagePath];
 
 

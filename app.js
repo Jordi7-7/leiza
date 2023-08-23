@@ -2,10 +2,13 @@ import {PORT} from './config.js';
 import express from 'express';
 import mysql from 'mysql';
 import bodyParser from 'body-parser';
+import path from 'path';
+import fs from 'fs';
 
 const app = express();
 
 app.set('view engine','ejs');
+app.use(bodyParser.json());
 
 
 
@@ -91,21 +94,25 @@ app.post('/insertar',(req,res)=>{
     const nombre = req.body.NOMBRE;
     const cantidad = req.body.CANTIDAD;
     const precio = req.body.PRECIO;
-    const descripcion = req.body.DESCRIPCION;
+    const descripcion = req.body.DESCRIPCION || "";
     const categoria = req.body.CATEGORIA;
     const genero = req.body.GENERO;
 
+   
     //Guardar la imagen
     const imageBase64 = req.body.file; // La imagen en formato binario como base64
   const imageName = id+".jpg"; // Nombre que deseas para la imagen guardada
-  const directoryPath = path.join('recursos', 'img', 'Catalogo');
+  const directoryPath = path.join(process.cwd(), 'public','img', 'Catalogo');
+  const base64Data = imageBase64.replace("data:image/jpeg;base64,", "");
+  res.send(base64Data);
+
 
   // Decodificar la imagen base64 a formato binario
-  const imageBuffer = Buffer.from(imageBase64, 'base64');
+  const imageBuffer = Buffer.from(base64Data, 'base64');
   const imagePath = path.join(directoryPath, imageName);
 
   // Guardar la imagen en el directorio
-  fs.writeFile(imagePath, imageBuffer, (err) => {
+  fs.writeFileSync(imagePath, imageBuffer, (err) => {
     if (err) {
       console.error('Error al guardar la imagen:', err);
       res.status(500).send('Error al guardar la imagen');
@@ -115,13 +122,15 @@ app.post('/insertar',(req,res)=>{
     }
   });
     
+  const sql = "INSERT INTO productos VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+const values = [id, genero, categoria, nombre, descripcion, cantidad, precio, imagePath];
 
-    conexion.query("INSERT INTO productos VALUES ('"+id+"', "+genero+", "+categoria+",'"+nombre+"', '"+descripcion+"', "+cantidad+","+precio+",'"+imagePath+")",(error,results)=>{
+
+    conexion.query(sql, values,(error,results)=>{
 
         if(error) throw error;  
 
-        console.log(results);
-        res.json(results);
+        res.send("Ingresado correctamente");
         
 
     });

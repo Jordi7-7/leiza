@@ -2,7 +2,6 @@ import {PORT} from './config.js';
 import express from 'express';
 import mysql from 'mysql';
 import bodyParser from 'body-parser';
-import fs from fs;
 
 const app = express();
 

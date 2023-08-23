@@ -111,6 +111,8 @@ app.post('/insertar',(req,res)=>{
   const imageBuffer = Buffer.from(base64Data, 'base64');
   const imagePath = path.join(directoryPath, imageName);
 
+  console.log(imagePath);
+
   // Guardar la imagen en el directorio
   fs.writeFileSync(imagePath, imageBuffer, (err) => {
     if (err) {

@@ -102,8 +102,8 @@ app.post('/insertar',(req,res)=>{
     //Guardar la imagen
     const imageBase64 = req.body.file; // La imagen en formato binario como base64
   const imageName = id+".jpg"; // Nombre que deseas para la imagen guardada
-  const directoryPath = path.join('recursos','img', 'Catalogo');
-
+  const imagen = "/recursos/Catalogo/"+imageName;
+  const directoryPath = path.join(process.cwd(),'img', 'Catalogo');
   const base64Data = imageBase64.replace("data:image/jpeg;base64,", "");
 
 
@@ -123,7 +123,7 @@ app.post('/insertar',(req,res)=>{
   });
     
   const sql = "INSERT INTO PRODUCTOS VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-const values = [id, genero, categoria, nombre, descripcion, cantidad, precio, imagePath];
+const values = [id, genero, categoria, nombre, descripcion, cantidad, precio, imagen];
 
 
     conexion.query(sql, values,(error,results)=>{

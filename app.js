@@ -104,7 +104,6 @@ app.post('/insertar',(req,res)=>{
   const imageName = id+".jpg"; // Nombre que deseas para la imagen guardada
   const directoryPath = path.join(process.cwd(), 'public','img', 'Catalogo');
   const base64Data = imageBase64.replace("data:image/jpeg;base64,", "");
-  res.send(base64Data);
 
 
   // Decodificar la imagen base64 a formato binario

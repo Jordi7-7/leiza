@@ -173,7 +173,21 @@
   <section class="seccion sec-Sacos">
     <div class="contenido">
       <h1>Sacos y Abrigos</h1>
-      
+      <div class="items">
+        <% if(typeof data != 'undefined') { %>
+        <% data.forEach( (prenda) => { %>
+        <% if(prenda.ID_CAT==17){ %>
+        <div class="item">
+          <img src="<%=prenda.IMAGEN%>" alt="<%= prenda.NOMBRE %>">
+          <div class="producto-info">
+            <span><%= prenda.NOMBRE %></span>
+            <span class="precio">MXN <%= prenda.PRECIO %></span>
+          </div>
+        </div>
+        <% } %>
+        <% }) %>
+        <% } %>
+      </div>
   </section>
 
   <section class="seccion sec-Camisas">
